@@ -1,0 +1,14 @@
+{
+  "name": "foodgallery",
+  "version": "1.0.0",
+  "description": "A frontend project which displays various food items available in a dinner.  Built to learn Tailwind css",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
