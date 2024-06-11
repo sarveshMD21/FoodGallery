@@ -4,46 +4,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<body class="text-gray-500 font-customFont" >
 
-  <div class="grid md:grid-cols-3">
-    <div>
+    
+</head>
+<body class="text-gray-500 font-customFont overflow-y-scroll no-scrollbar" >
+
+  <div class="md:grid md:grid-cols-3">
+    <div class="md:col-span-1 md:flex md:justify-end">
       <nav>
-        <div>
-          <h1 class="font-bold">
-            <a href="/">Food Gallery</a>
+        <div class="flex justify-between">
+          <h1 class="font-bold p-4 ">
+            <a href="/" class="hover:text-gray-700">Food Gallery</a>
           </h1>
+          <div class="px-4 mx-3 flex cursor-pointer md:hidden justify-between align-middle" id="burger">
+          <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          </div>
         </div>
-        <ul>
-          <li>
+       <ul class="mt-6 text-sm hidden md:block" id="menu">
+          <li class="mt-1 border-r-4 border-primary">
             <a href="#">
-              <span>Home</span>
+              <div class="grid grid-cols-1">
+                <div class="flex justify-end">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+              <div class="px-3">
+                <span>Home</span>
+                </div>  
+              </div>
+            </div>
             </a>
           </li>
-          <li>
+          <li class="mt-1">
             <a href="#">
-              <span>About</span>
+              <div class="grid grid-cols-1">
+                <div class="flex justify-end">
+                  <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                  
+              <div class="px-3">
+                <span>About</span>
+                </div>  
+              </div>
+            </div>
             </a>
           </li>
-          <li>
+          <li class="mt-1">
             <a href="#">
-              <span>Contact</span>
+              <div class="grid grid-cols-1">
+                <div class="flex justify-end">
+                  <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg>
+                  
+                  
+              <div class="pr-3">
+                <span>Contact</span>
+                </div>  
+              </div>
+            </div>
             </a>
           </li>
         </ul>
       </nav>
     </div>
   
-    <main class="pl-10 bg-gray-100 col-span-2">
+    <main class="px-10 py-5 bg-gray-100 col-span-2">
       <div class="flex sm:justify-center md:justify-end font-bold">
-        <a href="#" class="text-primary">Log in</a>
-        <a href="#" class="text-primary ml-3">Sign up</a>
+        <a href="#" class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Log in</a>
+        <a href="#" class="text-primary ml-3 btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Sign up</a>
       </div>
 
       <header>
         <h2 class="text-5xl text-cyan-600 p-3">Recipes</h2>
-        <h3 class="text-xl text-cyan-600 p-3">Cook likeChefs</h3>
+        <h3 class="text-xl text-cyan-600 p-3">Cook like Chefs</h3>
       </header>
 
       <div>
@@ -58,6 +95,10 @@
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              
               <span>25 mins</span>
             </div>
           </div>
@@ -68,6 +109,9 @@
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
               <span>40 mins</span>
             </div>
           </div>
@@ -78,6 +122,9 @@
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
               <span>30 mins</span>
             </div>
           </div>
@@ -85,16 +132,56 @@
 
         <h4 class="mt-8 border-b border-gray-300">Most Popular</h4>
 
-        <div class="mt-10">
+        <div class="mt-10  grid lg:grid-cols-3">
           <!-- cards go here -->
+          <div class="card"> 
+            <img src="Assets/stew.jpg" alt="curry" class="h-32 sm:h-56">
+            <div class="m-4">
+              <span>5 Bean Chili Stew</span>
+              <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+            </div>
+            <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              
+              <span>25 mins</span>
+            </div>
+          </div>
+          <div class="card"> 
+            <img src="Assets/curry.jpg" alt="curry" class="h-32 sm:h-56">
+            <div class="m-4">
+              <span>Tofu  Umami curry</span>
+              <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+            </div>
+            <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <span>40 mins</span>
+            </div>
+          </div>
+          <div class="card"> 
+            <img src="Assets/noodles.jpg" alt="curry" class="h-32 sm:h-56">
+            <div class="m-4">
+              <span>Honk Kong style chilli noodles</span>
+              <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+            </div>
+            <div class="badge">
+              <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <span>30 mins</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="flex justify-center">
-        <div class="bg-secondary-200 text-secondary-100">Load more</div>
+        <div class="btn bg-secondary-200 text-secondary-100 transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-500">Load more</div>
       </div>    
     </main>
   </div>
-
+  <script src="index.js"></script>
 </body>
 </html>

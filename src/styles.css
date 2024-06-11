@@ -5,9 +5,26 @@
 @tailwind utilities;
 
 .card{
-    @apply  bg-white rounded-md overflow-hidden shadow-md relative h-32 w-40 sm:h-72 sm:w-64 md:w-72  m-3
+    @apply  bg-white rounded-md overflow-hidden shadow-md relative h-32 w-40 sm:h-72 sm:w-64 md:w-72  m-3 hover:shadow-xl
 }
 
 .badge{
     @apply bg-secondary-100 text-secondary-200 rounded-full font-bold text-sm inline-block p-2 absolute top-0 mt-1 ml-1
+}
+
+.btn{
+    @apply rounded-full text-xs cursor-pointer tracking-wider font-bold p-2 
+}
+
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
 }
